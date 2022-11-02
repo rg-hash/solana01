@@ -1,12 +1,5 @@
-<html>  
-<head> <title> JavaScript Palindrome </title>  
-</head>  
-<body>  
-  
-<!-- Use JavaScript programming code to validate the Palindrome numbers or strings. -->  
-<script>        
-          
-function validatePalin(str) {  
+
+function validatePalin(string) {  
   
     // get the total length of the words  
     const len = string.length;  
@@ -16,18 +9,12 @@ function validatePalin(str) {
   
         // validate the first and last characters are same  
         if (string[i] !== string[len - 1 - i]) {  
-            alert( 'It is not a palindrome');  
+            return( 'It is not a palindrome');  
         }  
     }  
-    alert( 'It is a palindrome');  
+    return( 'It is a palindrome');  
 }  
   
-// accept the string or number from the prompt  
-const string = prompt('Enter a string or number: ');  
-  
-const value = validatePalin(string);  
+const value = validatePalin(process.argv[2]);  
   
 console.log(value);  
-</script>  
-    </body>  
-        </html> 
